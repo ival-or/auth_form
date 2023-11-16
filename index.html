@@ -11,13 +11,26 @@
             <img class="logo_image" src="https://zenclass-files-hot-01.storage.yandexcloud.net/d68a9af2-0450-42ac-82cb-42b107cd1ebd.png">
             <h1 class="logo_title">Y_LAB_University</h1>
         </div>
-        <form action="/my-handling-form-page" method="post">
+        <form id="auth-form">
             <div class="inputs">
-                <input type="email" placeholder="email"/>
-                <input type="password" placeholder="Введите пароль"/>
+                <div class="email input">
+                    <input id="emailInput" type="email" placeholder="email" required />
+                    <div id="emailInput-hint" class="hint">Нет такого аккаунта</div>
+                </div>
+                <div class="password input">
+                    <input id="passwordInput" type="password" placeholder="Введите пароль" required/>
+                    <div id="passwordInput-hint" class="hint">Неверный пароль</div>
+                </div>
             </div>
             <button type="submit">Войти</button>
         </form>
     </div>
+    <div class="popup-bg" id="popup-bg">
+    </div>
+    <div class="popup" id="popup">
+        <h1>Успех!</h1>
+        <button id="close">Закрыть</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
